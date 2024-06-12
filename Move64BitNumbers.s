@@ -20,7 +20,8 @@ _start:
     shl r12, 32                     #Logische verschiebung nach links um 32 bits -> multiplikation mit 2^32
     add r12, [nArray+8]             #Zuaddieren des unteren teils -> nun ist die ganze Zahl wieder in r12
 #Achtung bei embedded Software stehen evtl. werte in r12-r15 da volatile register!
-
+#Mann könnte auch die r12-r15 register erstmal in einem "Store-Array" Speichern und via offset wieder laden im exitcall
+#dadurch sind die register ebenfalls nutzbar.
     #Exit Call in Linux:
     mov rax, 60
     mov rdi, 0
