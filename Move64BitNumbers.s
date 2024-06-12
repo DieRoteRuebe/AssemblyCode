@@ -19,9 +19,12 @@ _start:
     mov r12, [nArray]               #Mov aus dem Array in r12 (Oberer Teil)
     shl r12, 32                     #Logische verschiebung nach links um 32 bits -> multiplikation mit 2^32
     add r12, [nArray+8]             #Zuaddieren des unteren teils -> nun ist die ganze Zahl wieder in r12
-#Achtung bei embedded Software stehen evtl. werte in r12-r15 da volatile register!
+#Achtung bei embedded Software stehen evtl. werte in r12-r15 da non-volatile register!
 #Mann könnte auch die r12-r15 register erstmal in einem "Store-Array" Speichern und via offset wieder laden im exitcall
-#dadurch sind die register ebenfalls nutzbar.
+#dadurch sind die register ebenfalls nutzbar -> RSP am anfang eines Funktionsaufrufs. RBP hält die Stack-Adresse des vorherigen stacks beim Aufruf. 
+#    push rbp
+#    sub rsp, 40    -> raum machen für die register r12-r15
+#    ... register speicher....
     #Exit Call in Linux:
     mov rax, 60
     mov rdi, 0
