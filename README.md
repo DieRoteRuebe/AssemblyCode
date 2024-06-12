@@ -2,8 +2,10 @@
 Assembly Code
 
 <pre>
-Built and tested on Linux with gcc, ld, and as.
-I just store Assembly code ive written in here. 
+I just store Assembly code ive written in here.
+      
+-> the code was built and tested on Linux with gcc, ld, and as.
+
 compile with: 
       gcc -o fileout.o filein.s
       ld -o fileout filein.o
