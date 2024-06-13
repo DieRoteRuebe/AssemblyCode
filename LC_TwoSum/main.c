@@ -15,7 +15,7 @@ __attribute__((naked)); int main()
 	int numsA[] = { 2,7,11,15 };
 	int *returnSize = malloc(sizeof(int));
 	int numsSize = sizeof(numsA) / 4;
-  int target = 9;
+  	int target = 9;
 	twoSum(numsA, numsSize, target, returnSize);
 
 	return 0;
