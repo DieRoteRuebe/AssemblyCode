@@ -8,20 +8,17 @@ __attribute__((naked)); int main()
   int arraySize = sizeof(inArray)/4;
   int start = 0;
   int end = arraySize-1;
-  printf("%d", arraySize);
-  printf("\n");
+  printf("%d\n", arraySize);
   for(int i = 0; i < arraySize; i+=1)
   {
-    printf("%d", inArray[i]);
-    printf("\n");
+    printf("%d\n", inArray[i]);
   }
   printf("\n");
   quickSort(inArray, arraySize, start, end);
   arraySize = sizeof(inArray)/4;
   for(int i = 0; i < arraySize; i+=1)
   {
-    printf("%d", inArray[i]);
-    printf("\n");
+    printf("%d\n", inArray[i]);
   }
 
   
