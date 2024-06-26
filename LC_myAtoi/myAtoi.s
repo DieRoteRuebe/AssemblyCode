@@ -99,7 +99,7 @@ _returnMax:
 _returnPosMax:
     mov rax, 0x7FFFFFFF #Maxnumber of signed int32 if postive
 _return:
-    #Pop the saved volatiles from the stack and return
+    #Pop the saved non-volatiles from the stack and return
     pop r12
     pop r13
     pop r14
