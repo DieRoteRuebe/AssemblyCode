@@ -11,7 +11,7 @@ myAtoi:
     push r12
     #Prepare the flags and boundaries:
     mov r9, 0
-    mov rsi, 0x7FFFFFFF   #Max boundarie
+    mov rsi, 0x7FFFFFFF   #Max boundary
     xor rax, rax      #Init the registers with 0
     xor rbx, rbx
     mov rcx, 10
